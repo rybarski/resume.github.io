@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #403f44;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  padding: 20px 0;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1, .experience h2,.other h2,
+.details a {
+  color: #40a2e3;
+}
+
+header h1,
+header p {
+  margin: 0px;
+}
+
+.portrait {
+  width: 250px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.certs img {
+  width: 50px;
+}
+
+.details a {
+  text-decoration: none;
+}
+
+.details a:hover {
+  font-weight: bold;
+}
+
+.details {
+  flex-basis: calc(30%);
+}
+
+.content {
+  flex-basis: calc(68%);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.experience, .other{width:49%;}
+
+.experience{float:left}
+.other{float:right}
+
+
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    flex-basis: calc(100% - 20px);
+  }
+}
+
+.job ul{
+	color:#4697b5;
+	padding-left:17px;
+	margin:0;font-size:18px;
+}
+.job ul li span{
+	color:#444;
+	font-size:14px;
+}
+
+.job{
+	padding-top:50px;
+}
+
+.experience h4, .experience p, .other h4, .other p{
+	margin:0px;
+}
+.experience ul, .other ul{padding:15px 0 50px 20px;}
+.experience ul li, .other ul li{padding:5px 0;}
