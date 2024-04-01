@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var form = document.getElementById("userForm");
+            var message = document.getElementById("thankYouMessage");
+            
+            // Hide the form
+            form.style.display = "none";
+            
+            // Display the thank you message
+            message.innerHTML = name + ", thank you for your details. We will be in touch via " + email + " shortly.";
+            message.style.display = "block";
+        }
+    </script>
+    <style>
+        #userForm {
+            max-width: 500px;
+            margin: auto;
+        }
+        #thankYouMessage {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form id="userForm" onsubmit="handleFormSubmit(event)" class="mt-5">
+                <div class="form-group">
+                    Name: <input type="text" id="name" class="form-control" /><br/>
+                </div>
+                <div class="form-group">
+                    Email: <input type="email" id="email" class="form-control" /><br/>
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary" /><br/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div id="thankYouMessage" style="display:none;" class="alert alert-success"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
