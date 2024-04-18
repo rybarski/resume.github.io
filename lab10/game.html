@@ -29,7 +29,7 @@
 
     function playGame(userChoice) {
         if (attempts >= 3) {
-            // Display all plays when the game is over, with no list style
+            // Display all plays when the game is over.
             document.getElementById('result').innerHTML = `<h3>Game over. You've played 3 times.</h3>
                                                           <ul style="list-style: none;">${gameHistory.map(item => `<li>${item}</li>`).join('')}</ul>`;
             return;
